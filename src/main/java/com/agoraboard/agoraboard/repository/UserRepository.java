@@ -31,7 +31,7 @@ public class UserRepository {
     }
 
     public List<User> findByNickName(String nickName) {
-        // 맴버 특정 낙네임을 조회하는 메서드
+        // 맴버 특정 닉네임을 조회하는 메서드
         return em.createQuery("select u from User u where u.nickName = :name", User.class)
                 .setParameter("name", nickName)
                 .getResultList();
